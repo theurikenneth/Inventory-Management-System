@@ -17,7 +17,7 @@ from settings.config import Development, Staging, Production
 from settings.db_connect import conn
 
 app = Flask(__name__)
-app.config.from_object(Development)
+app.config.from_object(Staging)
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 
@@ -29,15 +29,15 @@ from models.contact import ContactModel
 from models.contactsales import ContactsalesModel
 from models.company import CompanyModel
 
-import sentry_sdk
-from flask import Flask
-from sentry_sdk.integrations.flask import FlaskIntegration
+# import sentry_sdk
+# from flask import Flask
+# from sentry_sdk.integrations.flask import FlaskIntegration
 
-sentry_sdk.init(
-    dsn="https://9ab1d05348c94175b10a4465b301d859@o490237.ingest.sentry.io/5556864",
-    integrations=[FlaskIntegration()],
-    traces_sample_rate=1.0
-)
+# sentry_sdk.init(
+#     dsn="https://9ab1d05348c94175b10a4465b301d859@o490237.ingest.sentry.io/5556864",
+#     integrations=[FlaskIntegration()],
+#     traces_sample_rate=1.0
+# )
 
 # # @app.route('/debug-sentry')
 # # def trigger_error():
