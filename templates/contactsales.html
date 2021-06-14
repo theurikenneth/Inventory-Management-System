@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Contact Sales | Zaplabs
+{%endblock%}
+
+{%block content%}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="container mt-4">
+
+<h3 class="text-center">Contact our sales team</h3><br />
+
+<!-- {% include 'includes/alerts.html' %} -->
+
+<div class="row">
+  <div class="col-md-8">
+      <form method='POST' action="{{url_for('contactsales')}}">
+        <input required class="form-control" name="name" placeholder="Name..." /><br />
+        <!--<input class="form-control" name="phone" placeholder="Phone..." /><br />-->
+        <input required class="form-control" name="email" placeholder="Work e-mail..." /><br />
+        <input required class="form-control" name="companyname" placeholder="Company name..." /><br />
+        <input required class="form-control" name="companysize" placeholder="Company size..." /><br />
+        <input required class="form-control" name="country" placeholder="Country..." /><br />
+        <select required class="form-control" name="salesteamhelp" placeholder="How can the sales team help you...?">
+          <option selected></option>
+          <option>I want evaluate Zaplabs for my organization</option>
+          <option>I want to understand which Zaplabs plan is right for me</option>
+          <option>I have a product question</option>
+        </select> <br />
+        <textarea class="form-control" name="textarea" placeholder="Anything else?" style="height:150px;"></textarea><br />
+        <button type="submit" class="btn btn-success">Submit</button><br /><br />
+      </form>
+  </div>
+  <div class="col-md-4">
+    <b>Customer service:</b> <br />
+    Phone: +1 129 209 291<br />
+    E-mail: <a href="mailto:support@zaplabs.com">support@zaplabs.com</a><br />
+    <br /><br />
+    <b>Headquarter:</b><br />
+    Company Inc, <br />
+    Las vegas street 201<br />
+    55001 Nevada, USA<br />
+    Phone: +1 145 000 101<br />
+    <a href="mailto:usa@zaplabs.com">usa@zaplabs.com</a><br />
+
+
+    <br /><br />
+    <b>Hong kong:</b><br />
+    Company HK Litd, <br />
+    25/F.168 Queen<br />
+    Wan Chai District, Hong Kong<br />
+    Phone: +852 129 209 291<br />
+    <a href="mailto:hk@zaplabs.com">hk@zaplabs.com</a><br />
+
+  </div>
+  
+</div>
+</div>
+
+{%endblock%}
+
+{%block footer%}
+
+{%endblock%}

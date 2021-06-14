@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Welcome to Zaplabs
+{%endblock%}
+
+{%block content%}
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">Zaplabs</h1>
+    <p class="lead font-weight-normal">Inventory Management can be hard, messy, complicated… and still the best way to managment inventory and stock. 
+      That’s why we made Zaplabs — a place where people get to manage inventory, effectively</p>
+    <a class="btn btn-lg btn-outline-success mb-3 mb-md-0 mr-md-3" href="{{url_for('register')}}"><b>Get Started</b></a>
+    <a href="{{url_for('signin')}}" class="btn btn-lg btn-outline-primary" onclick="ga('Sign in');">Sign in</a>
+  </div>
+
+<div class="masthead-followup row m-0 border border-white">
+  <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+    <h3>Inventory Management</h3>
+    <p>Any business must manage its inventory.
+      Managing inventory like a pro can be easy and cheap.</p>
+    <hr class="half-rule">
+    <a class="btn btn-outline-primary" href="{{url_for('signin')}}">Explore Inventory Management</a>
+  </div>
+
+  <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+    <h3>Stock Management</h3>
+    <p>Any business must manage its stock.
+      Managing stock like a pro can be easy and cheap.</p>
+    <link rel="stylesheet" href="" integrity="#" crossorigin="anonymous">
+        <hr class="half-rule">
+        <a class="btn btn-outline-primary" href="{{url_for('signin')}}">Explore Stock Management</a>
+      </div>
+    
+      <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+        <h3>Sales</h3>
+        <p>Any business must manage sales.
+          Managing sales like a pro is easy and cheap with Zaplabs.
+        </p>
+
+        <hr class="half-rule">
+        <a href="{{url_for('signin')}}" class="btn btn-outline-primary">Explore Sales</a>
+      </div>
+    </div>
+    
+{%endblock%}
+
+{%block footer%}
+
+
+{%endblock%}

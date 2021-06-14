@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{url_for('index')}}">Zaplabs</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Why Zaplabs?
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{url_for('features')}}">Features</a>
+              <a class="dropdown-item" href="{{url_for('zaplabs_vs_manual')}}">Replacing manual systems</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('solutions')}}">Solutions</a>
+          </li>
+        {% if current_user.is_authenticated %}
+          <li class="nav-item">
+            <a class="btn btn-lg btn-outline-primary" href="{{url_for('dashboard')}}">Dashboard</a>
+          </li>  
+          <li class="nav-item">
+            <a class="btn btn-lg btn-outline-warning" href="{{url_for('logout')}}">Log out</a>
+          </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('pricing')}}">Pricing</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('contactsales')}}">Contact sales</a>
+        </li><br />
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('signin')}}">Sign in</a>
+        </li><br />
+        <li class="nav-item">
+          <a class="btn btn-lg btn-outline-success" href="{{url_for('register')}}"><b>TRY FOR FREE</b></a>
+        </li>
+       
+      </ul>
+    </div>
+    {% endif %}
+  </nav>
+  {% include 'includes/alerts.html' %}

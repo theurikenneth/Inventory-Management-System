@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Solutions | Zaplabs
+{%endblock%}
+
+{%block content%}
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">Where work happens</h1>
+      Whatever stock and inventory tou have, you can use Zaplabs for your business</p>
+    <a class="btn btn-lg btn-outline-success mb-3 mb-md-0 mr-md-3" href="{{url_for('register')}}"><b>TRY ZAPLABS</b></a>
+    <a href="{{url_for('contactsales')}}" class="btn btn-lg btn-outline-primary" onclick="ga('contactsales');">CONTACT SALES</a>
+  </div>
+
+<div class="masthead-followup row m-0 border border-white">
+  <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+    <h3>All companies</h3>
+    <p>No matter the industry your organization is in, stock, inventory and sales management is crucial.
+      Managing inventory like a pro can be easy and cheap.</p>
+    <hr class="half-rule">
+    <a class="btn btn-outline-primary" href="{{url_for('signin')}}">Explore Inventory Management</a>
+  </div>
+
+  <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+    <h3>Amazing Solutions</h3>
+    <p>Amazing for remote work.
+        Stay connected and productive while working alongside colleagues or when others are from wherever.
+    </p>
+    <link rel="stylesheet" href="" integrity="#" crossorigin="anonymous">
+        <hr class="half-rule">
+        <a class="btn btn-outline-primary" href="{{url_for('signin')}}">Explore Stock Management</a>
+      </div>
+    
+      <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+        <h3>All kind of teams</h3>
+        <p>No matter which branch of the org chart you call home, you can keep your stocks, inventories and sales organized and efficient in Zaplabs.
+        </p>
+
+        <hr class="half-rule">
+        <a href="{{url_for('signin')}}" class="btn btn-outline-primary">Explore Sales</a>
+      </div>
+    </div>
+    
+    
+{%endblock%}
+
+{%block footer%}
+
+{%endblock%}

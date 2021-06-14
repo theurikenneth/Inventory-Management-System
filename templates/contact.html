@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Contact Us | Zaplabs
+{%endblock%}
+
+{%block content%}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container mt-4">
+
+<h3 class="text-center">Contact us</h3><br />
+
+<!-- {% include 'includes/alerts.html' %} -->
+
+<div class="row">
+  <div class="col-md-8">
+      <form method='POST' action="{{url_for('contact')}}">
+        <input required class="form-control" name="name" placeholder="Name..." /><br />
+        <!--<input class="form-control" name="phone" placeholder="Phone..." /><br />-->
+        <input required class="form-control" name="email" placeholder="E-mail..." /><br />
+        <textarea required class="form-control" name="textarea" placeholder="How can we help you?" style="height:150px;"></textarea><br />
+        <button type="submit" class="btn btn-success">Submit</button><br /><br />
+      </form>
+  </div>
+  <div class="col-md-4">
+    <b>Customer service:</b> <br />
+    Phone: +1 129 209 291<br />
+    E-mail: <a href="mailto:support@zaplabs.com">support@zaplabs.com</a><br />
+    <br /><br />
+    <b>Headquarter:</b><br />
+    Company Inc, <br />
+    Las vegas street 201<br />
+    55001 Nevada, USA<br />
+    Phone: +1 145 000 101<br />
+    <a href="mailto:usa@zaplabs.com">usa@zaplabs.com</a><br />
+
+
+    <br /><br />
+    <b>Hong kong:</b><br />
+    Company HK Litd, <br />
+    25/F.168 Queen<br />
+    Wan Chai District, Hong Kong<br />
+    Phone: +852 129 209 291<br />
+    <a href="mailto:hk@zaplabs.com">hk@zaplabs.com</a><br />
+
+
+  </div>
+</div>
+
+</div>
+
+    
+{%endblock%}
+
+{%block footer%}
+
+{%endblock%}

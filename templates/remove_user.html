@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Get Started | Zaplabs
+{%endblock%}
+
+{%block content%}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<div class="container mt-5">
+	<div class="card bg-light">
+		<article class="card-body mx-auto" style="max-width: 400px;">
+			<h4 class="card-title mt-3 text-center">Delete User</h4>
+			<p class="text-center">You are about to Delete other users</p>
+			<!-- {% include 'includes/alerts.html' %} -->
+			<form method='POST' action="{{url_for('remove_user')}}">
+			<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+				 </div>
+				<input required name="fullName" id="fullName" class="form-control" placeholder="Full name" type="text">
+			</div> <!-- form-group// -->
+			<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+				 </div>
+				<input required name="emailAddress" id="emailAddress" class="form-control" placeholder="Email address" type="email">
+			</div> <!-- form-group// -->
+			
+			<!--<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+				</div>
+				<input required class="form-control" name="repeatPassword" id= "repeatPassword" placeholder="Repeat password" type="password">
+			</div>--> <!-- form-group// -->  
+			<!-- <div class="form-group">
+				<p class="text-center">By continuing, you’re agreeing to our <a href="#">Terms Of Use</a>, <a href="#">Cookie Policy</a> and <a href="#"> Privacy Policy</a></p>
+			 </div> -->                                   
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-block"> Remove Account  </button>
+			</div> <!-- form-group// -->      
+                                                        
+		</form>
+		</article>
+		</div> <!-- card.// -->
+		
+		</div> 
+		<!--container end.//-->
+</div>
+
+{%endblock%}
+
+{%block footer%}
+
+{%endblock%}
